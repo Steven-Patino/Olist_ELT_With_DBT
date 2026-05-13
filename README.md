@@ -135,7 +135,6 @@ dbt docs serve # Para visualizar la documentación generada en tu navegador
 ```
 olist_etl_with_dbt/
 ├── data/                       # Archivos CSV de datos crudos de Olist
-├── docs/                       # Documentación general del proyecto (antigua ubicación)
 ├── eda/                        # Informes de Análisis Exploratorio de Datos (EDA)
 │   └── docs/                   # Documentos Markdown de EDA
 ├── general_docs/               # Documentación centralizada del proyecto (nueva ubicación)
