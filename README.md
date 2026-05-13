@@ -10,7 +10,7 @@ Este proyecto implementa un pipeline de Extracción, Carga y Transformación (EL
 ## 🎯 Origen y Hoja de Ruta
 Este proyecto parte de solucionar las problemáticas planteadas en el siguiente desafío técnico: [Gist de Janner-GP](https://gist.github.com/Janner-GP/f8bb21bbcbce766bf27b084dcf0b2f40).
 
-La ruta de desarrollo seguida es:
+La ruta de desarrollo proxima a realizar son:
 
 ### 🔥 Parte 9 — Desafío adicional
 
