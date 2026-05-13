@@ -167,6 +167,6 @@ La documentación detallada de la arquitectura, los modelos de datos y los halla
 ## 👨‍💻 Autor
 
 **Steven Alexander Patino Arenas**  
-Proyecto Final de Análisis de Datos, Mayo 2026.
+Olist ETL con DBT, Mayo 2026.
 
 ---
