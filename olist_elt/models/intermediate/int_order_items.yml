@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: int_order_items_details
+    description: >
+      Este es el "Gran Tablón" transaccional del proyecto. 
+      Une ítems, órdenes, productos y clientes en una sola tabla plana.
+      Sirve como escalón único para alimentar todos los modelos de la capa MARTS.
+    columns:
+      - name: order_id
+        description: "Llave primaria de la orden (proviene de stg_orders)."
+        tests:
+          - not_null
+
+      - name: customer_unique_id
+        description: >
+          Identificador único permanente del cliente. 
+          Esencial para calcular la recurrencia y el comportamiento histórico del usuario real.
+        tests:
+          - not_null
+
+      - name: product_category_name
+        description: "Categoría del producto normalizada (Camel Case y manejo de nulos)."
+
+      - name: purchase_date
+        description: "Fecha de compra (sin hora) para facilitar el análisis de ventas diarias."
+        tests:
+          - not_null
+
+      - name: total_item_value
+        description: "Métrica financiera base que suma el precio del producto y el valor del flete."
+        tests:
+          - not_null
+
+      - name: order_status
+        description: "Estado actual de la orden. Se usará en los Marts para filtrar solo órdenes 'delivered'."

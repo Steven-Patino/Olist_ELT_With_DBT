@@ -1,0 +1,48 @@
+version: 2
+
+sources:
+  - name: raw_data
+    schema: raw
+    tables:
+      - name: orders
+      - name: order_items
+      - name: customers
+      - name: products
+
+models:
+  - name: stg_orders
+    description: "Limpieza de la tabla de órdenes y conversión de tipos de datos."
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_order_items
+    description: "Detalle de artículos por orden con precisión numérica en precios."
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: order_item_id
+        tests:
+          - not_null
+
+  - name: stg_customers
+    description: "Información geográfica y de identidad única de clientes."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_unique_id
+        tests:
+          - not_null
+
+  - name: stg_products
+    description: "Catálogo de productos con categorías normalizadas."
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null

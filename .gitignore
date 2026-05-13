@@ -1,0 +1,27 @@
+# Entorno de Python
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# dbt - Archivos compilados y logs
+target/
+dbt_modules/
+dbt_packages/
+logs/
+
+# Datos (Archivos CSV pesados que no deben subirse a Git)
+data/*.csv
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python Build
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,29 @@
+name: 'olist_elt'
+version: '1.0.0'
+config-version: 2
+
+# Este nombre debe coincidir con el que tengas en tu C:\Users\Steven\.dbt\profiles.yml
+profile: 'olist_elt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  olist_elt:
+    staging:
+      +schema: staging
+      +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+    marts:
+      +schema: marts
+      +materialized: table

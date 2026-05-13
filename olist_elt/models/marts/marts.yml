@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: mart_sales_by_customer
+    description: "Métricas de ventas agregadas por identidad única de cliente."
+    columns:
+      - name: customer_unique_id
+        tests:
+          - unique
+          - not_null
+
+  - name: mart_sales_by_category
+    description: "Rendimiento de ventas desglosado por categoría de producto."
+
+  - name: mart_sales_by_product
+    description: "Ranking de productos más vendidos e ingresos generados."
